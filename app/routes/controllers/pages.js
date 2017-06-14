@@ -43,8 +43,8 @@ var pages ={
     },
     create: function(req, res){
     	res.render("create");
-    }
-}
+    },
+
 
 	post: function(req, res){
 		Post.findOne({"_id": req.query.p}, function(err, post){
@@ -52,7 +52,7 @@ var pages ={
 				console.log(err);
 			} else{
 				res.render("post", {
-				current: post
+					current: post
 				});
 			}
 		})

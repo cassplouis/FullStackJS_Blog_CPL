@@ -1,12 +1,14 @@
 var express = require("express"),
     bodyParser = require("body-parser"),
+    bcrypt= require("bcrypt-nodejs"),
     hbs = require("hbs"),
     path = require("path"),
     session = require("express-session"),
     mongoose = require("mongoose"),
     passport = require("passport"),
-     auth = require("./blog/auth/auth"),
-    routes = require("./blog/routes/routes"),
+    methodOverride = require("method-override"),
+    auth = require("./app/auth/passport-local"),
+    routes = require("./app/routes/routes"),
     app = express();
 
 
@@ -22,6 +24,8 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
+
+app.use(methodOverride('_method'));
 
 app.use(passport.initialize());
 app.use(passport.session());

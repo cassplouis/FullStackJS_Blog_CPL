@@ -2,7 +2,7 @@ var LocalStrategy = require("passport-local"), Strategy,
 	User = require("../models/userModel"),
 	bcrypt = require("bcrypt-nodejs");
 
-model.exports = function(passport){
+module.exports = function(passport){
 
 	passport.serializeUser(function(user, done){
 		done(null, user);
@@ -31,3 +31,5 @@ model.exports = function(passport){
 	  		return done(null, user);
 	  	  }
 	  });
+	}));
+}
