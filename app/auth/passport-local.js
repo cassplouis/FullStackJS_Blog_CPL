@@ -1,4 +1,4 @@
-var LocalStrategy = require("passport-local"), Strategy,
+var LocalStrategy = require("passport-local").Strategy,
 	User = require("../models/userModel"),
 	bcrypt = require("bcrypt-nodejs");
 

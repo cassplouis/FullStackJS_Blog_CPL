@@ -1,10 +1,7 @@
 var auth = require("../../auth/local-signup");
 var Post = require("../../models/blogModel");
 
-var pages ={
-	home: function(req, res){
-		res.render("home");
-	},
+var pages = {
 	index: function(req, res){
 		Post.find({"user": req.user.username }, function(err, post){
 			if(err){
@@ -31,19 +28,20 @@ var pages ={
             if(data.success){
                 res.json({
                     "success": "All good"
-                });
+              });
             } else {
               res.json({
                     "success": "Messed up"
               });
             }
         });
+     },
 
-        res.render("signup");
+       /* res.render("signup");
     },
     create: function(req, res){
     	res.render("create");
-    },
+    },*/
 
 
 	post: function(req, res){

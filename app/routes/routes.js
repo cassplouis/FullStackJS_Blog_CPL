@@ -7,8 +7,8 @@ var controllers = {
 
 module.exports = function(app, passport){
 
-  	app.get(r.home, controllers.pages.home);
-//check if user is logged in
+  	/*app.get(r.home, controllers.pages.home);
+//check if user is logged in*/
   	app.get(r.login, controllers.pages.login);
 //if not, rerouted to login route
   	app.get(r.index, controllers.session, controllers.pages.index);

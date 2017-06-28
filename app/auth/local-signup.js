@@ -8,7 +8,7 @@ module.exports = function(user, callback){
 		admin: true, 
 		firstName: user.first,
 		lastName: user.last, 
-		createdAt: newDate().toLocaleDateString()
+		createdAt: new Date().toLocaleDateString()
 	}).save(function(err){
 		if(err){
 			callback({
