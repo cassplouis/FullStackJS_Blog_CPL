@@ -1,6 +1,5 @@
 var express = require("express"),
     bodyParser = require("body-parser"),
-    bcrypt= require("bcrypt-nodejs"),
     hbs = require("hbs"),
     path = require("path"),
     session = require("express-session"),
