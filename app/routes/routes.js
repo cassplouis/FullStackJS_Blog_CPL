@@ -1,6 +1,6 @@
 var r = require("./routes.json");
 var controllers = {
-   static: require("controllers/pages"),
+   static: require("./controllers/pages"),
    pages: require("./controllers/pages"),
    session: require("./controllers/session"),
    blogCtrl: require("./controllers/blogCtrl")

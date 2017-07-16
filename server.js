@@ -29,7 +29,7 @@ app.use(methodOverride('_method'));
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.set("views", path.join(__dirname, "blog/views"));
+app.set("views", path.join(__dirname, "app/views"));
 app.set("view engine", "hbs");
 
 auth(passport);
