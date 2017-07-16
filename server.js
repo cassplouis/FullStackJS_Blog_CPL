@@ -36,6 +36,6 @@ auth(passport);
 routes(app, passport);
 
 mongoose.connect(process.env.DB_URL);
-app.listen(8080);
+app.listen(process.env.PORT || 8080);
 console.log("Blog is Running");
 
