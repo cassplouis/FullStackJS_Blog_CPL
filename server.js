@@ -35,7 +35,7 @@ app.set("view engine", "hbs");
 auth(passport);
 routes(app, passport);
 
-mongoose.connect("mongodb://localhost/blog");
+mongoose.connect(process.env.DB_URL);
 app.listen(8080);
 console.log("Blog is Running");
 
